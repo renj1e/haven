@@ -1063,7 +1063,7 @@ img{max-width: 100%}
   font-weight: 300;
   margin: 0;
   padding: 24px 0;
-  text-align: right;
+  text-align: center;
 }
 .copyright > p a {
     color: #f9c322;
@@ -1506,6 +1506,11 @@ aside.single-side-box.tags {
     padding: 0 5px;
 }
 .search-property .find-home-cagtegory .col-md-6 {
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.search-property .find-home-cagtegory .search-contractor {
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;

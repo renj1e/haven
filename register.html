@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Haven | Contact</title>
+    <title>Haven | Register</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- customizer style css -->
     <link rel="stylesheet" href="css/style-customizer.css">
-    <link href="#" data-style="styles" rel="stylesheet">    
+    <link href="#" data-style="styles" rel="stylesheet"> 
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -26,8 +26,11 @@
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> 
-    <div class="wrapper white_bg"> 
+    <![endif]-->  
+    <!--Preloader start-->
+    <div id="fakeLoader"></div>
+    <!--Preloader end-->
+    <div class="wrapper white_bg">
         <!--Header section start-->
         <header class="header header-2">
             <div class="header-top-1">
@@ -73,12 +76,12 @@
                                     <nav>
                                         <ul>
                                             <li><a href="index.html"> Home</a></li>
-                                            <li><a href="about-us.html">About</a></li>
+                                            <li><a class="active" href="about-us.html">About</a></li>
                                             <!-- <li><a href="blog.html">Blog</a></li> -->                                            
                                             <li><a href="properties-list-right-sidebar.html">Properties </a></li>
                                             <li><a href="agent.html">Agents</a></li>
                                             <li><a href="contractors.html">Contractors</a></li>
-                                            <li><a class="active" href="contact.html"> Contact us</a></li>
+                                            <li><a href="contact.html"> Contact us</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -145,6 +148,7 @@
             <!--Search box inner end-->
         </header>
         <!--Header section end-->
+
         <!--Breadcrumbs start-->
         <div class="breadcrumbs overlay-black">
             <div class="container">
@@ -152,12 +156,12 @@
                     <div class="col-md-12">
                         <div class="breadcrumbs-inner">
                             <div class="breadcrumbs-title text-center">
-                                <h1>Contact</h1>
+                                <h1>Register</h1>
                             </div>
                             <div class="breadcrumbs-menu">
                                 <ul>
                                     <li><a href="index.html">Home /</a></li>
-                                    <li>Contact</li>
+                                    <li>Register</li>
                                 </ul>
                             </div>
                         </div>
@@ -166,85 +170,45 @@
             </div>
         </div>
         <!--Breadcrumbs end-->
-
-        <!--Contact page start-->
-        <div class="contact-page pt-130">
+        <!--Register page inner start-->
+        <div class="register-page-inner ptb-100 bg-1">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="map-area">
-                            <div class="place-map-inner">
-                                <div id="googleMap-2" style="width:100%;height:466px;filter: grayscale(100%);-webkit-filter: grayscale(100%);"></div>
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+                        <div class="register-page-form">
+                            <div class="account-title">
+                                <h5>Creat an Account</h5>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                                <div class="contact-list-inner">
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <div class="single-contact_list">
-                                                <div class="single-contact-icon">
-                                                    <img src="img/icon/c-4.png" alt="">
-                                                </div>
-                                                <div class="single-contact-desc">
-                                                    <p>256, 1st AVE, Manchester</p>
-                                                    <p>125 , Noth England</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-xs-12 ">
-                                            <div class="single-contact_list">
-                                                <div class="single-contact-icon">
-                                                    <img src="img/icon/c-5.png" alt="">
-                                                </div>
-                                                <div class="single-contact-desc">
-                                                    <p>Telephone : +012 345 678 102</p>
-                                                    <p>Telephone : +012 345 678 102</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <div class="single-contact_list">
-                                                <div class="single-contact-icon">
-                                                    <img src="img/icon/c-6.png" alt="">
-                                                </div>
-                                                <div class="single-contact-desc">
-                                                    <p>Email : info@example.com</p>
-                                                    <p>Web : www.example.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <form action="#">
+                                <div class="username">
+                                    <input type="text" placeholder="Username">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="leave-message">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                                    <div class="contact-form-inner">
-                                        <div class="contact-form-title">
-                                            <h5>Leave a Message</h5>
-                                        </div>
-                                        <form id="contact-form" action="mail.php" method="post">
-                                            <input name="name" type="text" placeholder="Your Name">
-                                            <input  name="email" type="text" placeholder="Email here">
-
-                                            <textarea name="message" placeholder="Write here"></textarea>
-                                            <div class="form-submit">
-                                                <button type="submit">Submit</button>
-                                            </div>
-                                            <p class="form-messege"></p>
-                                        </form>
-                                    </div>
+                                <div class="email">
+                                    <input type="text" placeholder="Email">
                                 </div>
-                            </div>
+                                <div class="password">
+                                    <input type="password" placeholder="Password">
+                                </div>
+                                <div class="password">
+                                    <input type="password" placeholder="Confirm password">
+                                </div>
+                                 <div class="agree-text">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox"> <span>I agree with your</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div class="register">
+                                    <button type="button">Register</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Contact page end-->
-
+        <!--Register page inner end-->
         <!--Brand section start-->
         <div class="brand-section">
             <div class="container">
@@ -388,9 +352,7 @@
             </div>
             <!--Footer bottom end-->
          </footer>
-    </div> 
-     
-     
+    </div>
  <!-- quick view start -->
     <div  class="modal fade" role="dialog" tabindex="-1" id="quick-view">
         <div class="modal-dialog" role="document">
@@ -432,6 +394,7 @@
     </div>
    
     <!-- quick view end -->
+    
     
             <!--=================================
      style-customizer start  -->
@@ -509,13 +472,10 @@
 
     
     
-    
-    
     <!-- Map js code here -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj9b_nyz33KEaocu6ZOXRgqwwUZkDVEAw"></script>
-   <script src="js/map.js"></script>
-   <script src="js/map-2.js"></script>
-   
+    <script src="js/map.js"></script>
+
     <!-- All jquery file included here -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
