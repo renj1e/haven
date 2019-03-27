@@ -1,5 +1,5 @@
 /* -----------------------------------
-Template:  Haven Real Estate html5 template
+Template:  Real Estate template
 
 NOTE: This is Header style file. All Header related style included in this file.
 
@@ -22,7 +22,8 @@ NOTE: This is Header style file. All Header related style included in this file.
   padding: 35px 0;
   text-transform: uppercase;
 }
-.header-menu ul li:hover a {
+.header-menu ul li:hover a,
+.header-menu ul li a.active {
   color: #f9c322;
 }
 .header-menu {
@@ -75,13 +76,32 @@ NOTE: This is Header style file. All Header related style included in this file.
   color: #f9c322;
   background: inherit;
 }
+.find-contractor {
+    display: inline-block;
+}
+.find-contractor > a {
+  background: #083267 none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Poppins",sans-serif;
+  font-weight: 400;
+  height: 35px;
+  line-height: 33px;
+  padding: 0 12px;
+}
+.find-contractor > a:hover {
+  border-color: #083267;
+  color: #083267;
+  background: inherit;
+}
 .logo > a {
   background: #ffffff none repeat scroll 0 0;
   display: inline-block;
-  height: 130px;
+  height: 115px;
   position: relative;
   text-align: center;
-  width: 135px;
+  width: 100px;
   z-index: 999;
 }
 /*------------
@@ -103,7 +123,7 @@ NOTE: This is Header style file. All Header related style included in this file.
     display: inline-block;
 }
 .header-search {
-  padding: 12px 0;
+  padding: 11px 10px 10px 0px;
   position: relative;
 }
 .search-box-area {
@@ -170,7 +190,10 @@ NOTE: This is Header style file. All Header related style included in this file.
     font-weight: 400;
 }
 .header-topbar-menu ul li {
-    margin-right: 65px;
+    margin-right: 25px;
+}
+.header-topbar-menu ul li:hover {
+    cursor: pointer;
 }
 .header-topbar-menu span {
     display: inline-block;
@@ -373,8 +396,8 @@ NOTE: This is Header style file. All Header related style included in this file.
 }
 
 .sticky .logo > a {
-    height: 105px;
-    width: 105px;
+    height: 115px;
+    width: 100px;
 }
 .sticky .logo img {
     margin-top: 10px;

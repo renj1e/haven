@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Haven Real Estate html5 template
+    Template Name: Real Estate template
     Description: This is html5 template
     Author: Devitems
     Version: 1.0
@@ -1283,7 +1283,7 @@ img{max-width: 100%}
 ----------------*/
 .breadcrumbs{
   background: url(img/common/breadcrumbs.jpg)no-repeat scroll center center / cover;
-  padding: 176px 0 19px;
+  padding: 50px 0 19px;
   position: relative;
 }
 .overlay-black:before{
@@ -1316,7 +1316,7 @@ img{max-width: 100%}
     text-transform: capitalize;
 }
 .breadcrumbs-menu {
-    padding-top: 138px;
+    padding-top: 60px;
     text-align: right;
 }
 .breadcrumbs-menu li a:hover {
