@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Haven | Find Contractor</title>
+    <title>Haven | Calculator</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -26,10 +26,10 @@
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> 
+    <![endif]-->  
     <!--Preloader start-->
     <div id="fakeLoader"></div>
-    <!--Preloader end--> 
+    <!--Preloader end-->
     <div class="wrapper white_bg">
         <!--Header section start-->
         <header class="header header-2">
@@ -76,7 +76,7 @@
                                     <nav>
                                         <ul>
                                             <li><a href="index.html"> Home</a></li>
-                                            <li><a href="about-us.html">About</a></li>
+                                            <li><a class="active" href="about-us.html">About</a></li>
                                             <!-- <li><a href="blog.html">Blog</a></li> -->                                            
                                             <li><a href="#"> Properties</a>
                                                 <ul class="dropdown_menu">
@@ -161,12 +161,12 @@
                     <div class="col-md-12">
                         <div class="breadcrumbs-inner">
                             <div class="breadcrumbs-title text-center">
-                                <h1>CONTRACTORS / BUILDERS</h1>
+                                <h1>Calculator</h1>
                             </div>
                             <div class="breadcrumbs-menu">
                                 <ul>
                                     <li><a href="index.html">Home /</a></li>
-                                    <li>Contractors and Builders</li>
+                                    <li>Calculator</li>
                                 </ul>
                             </div>
                         </div>
@@ -176,388 +176,100 @@
         </div>
         <!--Breadcrumbs end-->
 
-        <!--Feature property section-->
-        <div class="feature-property properties-list pt-130">
+        <!--- Calculator start -->
+        <div class="creat-agency-page pt-130 pb-130">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="sidebar left">
-                            <aside class="single-side-box search-property">
-                                <div class="aside-title">
-                                    <h5>Search for Contractors / Builders</h5>
-                                </div>
-                                <div class="find_home-box">
-                                    <div class="find_home-box-inner">
-                                        <form action="#">
-                                            <div class="find-home-cagtegory">
-                                                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                                    <div class="col-md-12 search-contractor">
-                                                        <div class="find-home-item">               
-                                                            <input type="text" name="min-area" placeholder="Enter your Zip Code">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="single-side-box feature">
-                                <div class="aside-title">
-                                    <h5>Featured Property</h5>
-                                </div>
-                                <div class="feature-property">
+                        <form name="calc" method="post" action="#">
+                            <div class="creat-agency-profile">
+                                <div class="contact-information">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="single-property">
-                                                <div class="property-img">
-                                                    <a href="single-properties.html">
-                                                        <img src="img/property/7.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="property-desc text-center">
-                                                    <div class="property-desc-top">
-                                                        <h6><a href="single-properties.html">Friuli-Venezia Giulia</a></h6>
+                                            <div class="contact-form-inner">
+                                                
+                                                <div class="contact-information-box">
+
+                                                    <div class="form-group">
+                                                        <label>Property Value </label>
+                                                        <input name="homevalue" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 1,000,000)"/> 
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Down payment</label>
+                                                        <input name="principal" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 500,000)" /> 
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>APR (Annual Percentage Rate) %</label>
+                                                        <input name="intRate" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 10)" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Loan term in year</label>
+                                                        <input name="numYears" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 5 years)" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Real Estate taxes (amount/year)</label>
+                                                        <input name="annualTax" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 0)" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Homeowners insurance (amount/year ex. 0)</label>
+                                                        <input name="annualInsurance" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="(ex. 0)" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>PMI (Private Mortgage Insurance) %</label>
+                                                        <input name="monthlyPMI" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder=" (ex. 10)" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Closing costs (0 if not in loan)</label>
+                                                        <input name="closingcosts" type="number" onKeyUp="clear_results(this.form);computeForm(this.form)" placeholder="0" />
+                                                    </div>
+                                                    <div class="form-submit">
+                                                        <button type="button" onClick="computeForm(this.form)">Compute Mortgage Payment</button>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="single-property">
-                                                <div class="property-img">
-                                                    <a href="single-properties.html">
-                                                        <img src="img/property/3.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="property-desc text-center">
-                                                    <div class="property-desc-top">
-                                                        <h6><a href="single-properties.html">Friuli-Venezia Giulia</a></h6>
+                                            <div class="contact-form-inner">
+                                                <div class="contact-information-box">
+
+                                                    <div class="form-group">
+                                                        <label>Total Monthly Payment</label>
+                                                        <input type="text" name="monthlyPmt" placeholder="0" readonly />
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="single-property">
-                                                <div class="property-img">
-                                                    <a href="single-properties.html">
-                                                        <img src="img/property/5.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="property-desc text-center">
-                                                    <div class="property-desc-top">
-                                                        <h6><a href="single-properties.html">Friuli-Venezia Giulia</a></h6>
+                                                    <div class="form-group">
+                                                        <label>Principal & Interest</label>
+                                                        <input type="text" name="monthlyPI" readonly placeholder="0" />
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <div class="single-property">
-                                                <div class="property-img">
-                                                    <a href="single-properties.html">
-                                                        <img src="img/property/11.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="property-desc text-center">
-                                                    <div class="property-desc-top">
-                                                        <h6><a href="single-properties.html">Friuli-Venezia Giulia</a></h6>
+                                                    <div class="form-group">
+                                                        <label>Taxes, Insurance & PMI</label>
+                                                        <input type="text" name="otherPmts" readonly placeholder="0" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Loan amount (with closing cost)</label>
+                                                        <input type="text" name="downpayment" readonly placeholder="0" />
+                                                    </div>
+
+                                                    <div class="form-submit">
+                                                        <button type="button" onClick="monthlyAmortSched(this.form)">Amort Schedule</button>
+                                                        <button type="reset">Clear</button>
+                                                        <button type="button">Print</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </aside>
-                             <aside class="single-side-box agent">
-                                <div class="aside-title">
-                                    <h5>Our Agent</h5>
-                                </div>
-                                <div class="our-agent-sidbar">
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                    <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/2.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                    <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/3.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                    <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/4.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                    <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/5.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                   <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-agent">
-                                                <div class="agent-img">
-                                                    <a href="agent-details.html">
-                                                        <img src="img/team/6.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="agent-title">
-                                                    <h6><a href="agent-details.html">Evan Smith</a></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                        </form>
 
-                            </aside>
-                            <aside class="single-side-box video">
-                                <div class="aside-title">
-                                    <h5>Take a tour</h5>
-                                </div>
-                                <div class="video-sidebar">
-                                    <div class="video-img">
-                                        <img src="img/common/video.jpg" alt="">
-                                    </div>
-                                    <div class="play-button">
-                                        <a href="https://youtu.be/vb5KLYAtPIs"><i class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <span>FOR SALE</span>
-                                    <div class="property-img">
-                                        <img src="img/property/7.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <div class="property-img">
-                                        <img src="img/property/8.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <div class="property-img">
-                                        <img src="img/property/9.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <span>FOR SALE</span>
-                                    <div class="property-img">
-                                        <img src="img/property/16.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <div class="property-img">
-                                        <img src="img/property/2.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <div class="property-img">
-                                        <img src="img/property/3.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <span>FOR SALE</span>
-                                    <div class="property-img">
-                                        <img src="img/property/4.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="single-property mb-40">
-                                    <div class="property-img">
-                                        <img src="img/property/5.jpg" alt="">
-                                    </div>
-                                    <div class="property-desc">
-                                        <div class="property-desc-top">
-                                            <h6><a href="contractor-details.html">Friuli-Venezia Giulia</a></h6>
-                                            <div class="property-location">
-                                                <p><img src="img/property/icon-5.png" alt=""> 568 E 1st Ave, Miami</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="pagination">
-                                    <div class="pagination-inner text-center">
-                                        <ul>
-                                            <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                            <li class="current">1</li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li>. . . . . .</li>
-                                            <li><a href="#">15</a></li>
-                                            <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-        <!--Feature property section end-->
-
-
-        <!--Brand section start-->
-        <div class="brand-section pd-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="brand-list">
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/1.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/2.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/3.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/4.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/5.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/1.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/2.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/3.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/4.png" alt=""></a>
-                            </div>
-                            <div class="single-brand">
-                                <a href="#"><img src="img/brand/5.png" alt=""></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Brand section end-->
+        <!--- Calculator end -->
+
         <footer class="footer wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
             <div class="footer-top">
                 <div class="container">
@@ -660,7 +372,9 @@
             <!--Footer bottom end-->
          </footer>
     </div>
-    <!-- quick view start -->
+     
+     
+ <!-- quick view start -->
     <div  class="modal fade" role="dialog" tabindex="-1" id="quick-view">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -699,8 +413,10 @@
             </div>
         </div>
     </div>
+   
     <!-- quick view end -->
     
+     
             <!--=================================
      style-customizer start  -->
 
@@ -771,14 +487,13 @@
       </div>
     </div>
 
-    <!-- style-customizer End -->
+    <!-- style-customizer End --> 
     
     
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    
     <!-- Map js code here -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj9b_nyz33KEaocu6ZOXRgqwwUZkDVEAw"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj9b_nyz33KEaocu6ZOXRgqwwUZkDVEAw"></script>
     <script src="js/map.js"></script>
 
     <!-- All jquery file included here -->
@@ -794,6 +509,441 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+
+<script Language='JavaScript'>
+
+function computeMonthlyPayment(prin, numPmts, intRate) {
+
+var pmtAmt = 0;
+
+if(intRate == 0) {
+   pmtAmt = prin / numPmts;
+} else {
+     intRate = intRate / 100.0 / 12;
+
+   var pow = 1;
+   for (var j = 0; j < numPmts; j++)
+      pow = pow * (1 + intRate);
+
+   pmtAmt = (prin * pow * intRate) / (pow - 1);
+
+}
+
+return pmtAmt;
+
+}
+
+
+
+
+function fn(num, places, comma) {
+
+var isNeg=0;
+
+    if(num < 0) {
+       num=num*-1;
+       isNeg=1;
+    }
+
+    var myDecFact = 1;
+    var myPlaces = 0;
+    var myZeros = "";
+    while(myPlaces < places) {
+       myDecFact = myDecFact * 10;
+       myPlaces = Number(myPlaces) + Number(1);
+       myZeros = myZeros + "0";
+    }
+    
+    onum=Math.round(num*myDecFact)/myDecFact;
+        
+    integer=Math.floor(onum);
+
+    if (Math.ceil(onum) == integer) {
+        decimal=myZeros;
+    } else{
+        decimal=Math.round((onum-integer)* myDecFact)
+    }
+    decimal=decimal.toString();
+    if (decimal.length<places) {
+        fillZeroes = places - decimal.length;
+       for (z=0;z<fillZeroes;z++) {
+        decimal="0"+decimal;
+        }
+     }
+
+   if(places > 0) {
+      decimal = "." + decimal;
+   }
+
+   if(comma == 1) {
+    integer=integer.toString();
+    var tmpnum="";
+    var tmpinteger="";
+    var y=0;
+
+    for (x=integer.length;x>0;x--) {
+        tmpnum=tmpnum+integer.charAt(x-1);
+        y=y+1;
+        if (y==3 & x>1) {
+            tmpnum=tmpnum+",";
+            y=0;
+        }
+    }
+
+    for (x=tmpnum.length;x>0;x--) {
+        tmpinteger=tmpinteger+tmpnum.charAt(x-1);
+    }
+
+
+    finNum=tmpinteger+""+decimal;
+   } else {
+      finNum=integer+""+decimal;
+   }
+
+    if(isNeg == 1) {
+       finNum = "-" + finNum;
+    }
+
+    return finNum;
+}
+
+
+
+
+function sn(num) {
+
+   num=num.toString();
+
+
+   var len = num.length;
+   var rnum = "";
+   var test = "";
+   var j = 0;
+
+   var b = num.substring(0,1);
+   if(b == "-") {
+      rnum = "-";
+   }
+
+   for(i = 0; i <= len; i++) {
+
+      b = num.substring(i,i+1);
+
+      if(b == "0" || b == "1" || b == "2" || b == "3" || b == "4" || b == "5" || b == "6" || b == "7" || b == "8" || b == "9" || b == ".") {
+         rnum = rnum + "" + b;
+
+      }
+
+   }
+
+   if(rnum == "" || rnum == "-") {
+      rnum = 0;
+   }
+
+   rnum = Number(rnum);
+
+   return rnum;
+
+}
+
+function computeForm(form) {
+      var Vhomevalue = document.calc.homevalue.value;
+      var Vclosingcosts = document.calc.closingcosts.value; 
+      if(Vclosingcosts == 0 || Vclosingcosts == "") {
+         Vclosingcosts = 0;
+      }   
+      var Vprincipal =sn(parseFloat(Vhomevalue) + parseFloat(Vclosingcosts) - parseFloat(document.calc.principal.value));
+      var VintRate = sn(document.calc.intRate.value);
+      var VnumYears = sn(document.calc.numYears.value);
+      var VannualTax = document.calc.annualTax.value;
+      var VmonthlyTax =0;
+      if(VannualTax == 0 || VannualTax == "") {
+         VannualTax = 0;
+         VmonthlyTax =0;
+      } else {
+         VannualTax = sn(VannualTax);
+         VmonthlyTax = VannualTax / 12;
+         VmonthlyTax *= 100;
+         VmonthlyTax = Math.round(VmonthlyTax);
+         VmonthlyTax /= 100;
+      }
+
+      var VannualInsurance = document.calc.annualInsurance.value;
+      var VmonthlyInsurance = 0;
+      if(VannualInsurance == 0 || VannualInsurance == "") {
+         VannualInsurance = 0;
+         VmonthlyInsurance = 0;
+      } else {
+         VannualInsurance = sn(VannualInsurance);
+         VmonthlyInsurance = VannualInsurance / 12;
+         VmonthlyInsurance *= 100;
+         VmonthlyInsurance = Math.round(VmonthlyInsurance);
+         VmonthlyInsurance /= 100;
+      }
+      
+      var VmonthlyPMI = document.calc.monthlyPMI.value;
+
+      if(VmonthlyPMI == 0 || VmonthlyPMI == "" || Vhomevalue > 1.249999999*Vprincipal ) {
+         VmonthlyPMI = 0;
+      }   
+      else {
+         VmonthlyPMI = sn((VmonthlyPMI * document.calc.principal.value)/100);
+         VmonthlyPMI = VmonthlyPMI / 12;
+         VmonthlyPMI *= 100;
+         VmonthlyPMI = Math.round(VmonthlyPMI);
+         VmonthlyPMI /= 100;
+      }
+
+      var VotherPmts = Number(VmonthlyTax) + Number(VmonthlyInsurance) + Number(VmonthlyPMI);
+
+      var VnumPmts = VnumYears * 12;
+
+      var VpmtAmt = computeMonthlyPayment(Vprincipal, VnumPmts, VintRate);
+      var VtotalMtgPmt = Number(VpmtAmt) + Number(VotherPmts);
+      var Vdownpayment =sn(parseFloat(document.calc.homevalue.value) + parseFloat(Vclosingcosts) - parseFloat(document.calc.principal.value));
+
+      document.calc.monthlyPI.value = "$" + fn(VpmtAmt,0,1);
+      document.calc.otherPmts.value = "$" + fn(VotherPmts,0,1);
+      document.calc.monthlyPmt.value = "$" + fn(VtotalMtgPmt,0,1);
+      document.calc.downpayment.value = "$" + fn(Vdownpayment,0,1);
+       
+}
+
+
+function monthlyAmortSched(form) {
+
+   {
+
+      var Vhomevalue = document.calc.homevalue.value;
+      var Vclosingcosts = document.calc.closingcosts.value; 
+      if(Vclosingcosts == 0 || Vclosingcosts == "") {
+         Vclosingcosts = 0;
+      }   
+      var Vprincipal =sn(parseFloat(Vhomevalue) + parseFloat(Vclosingcosts) - parseFloat(document.calc.principal.value));
+
+
+      
+      var VintRate = sn(document.calc.intRate.value);
+      var VnumYears = sn(document.calc.numYears.value);
+      var VannualTax = document.calc.annualTax.value;
+      var VmonthlyTax =0;
+      if(VannualTax == 0 || VannualTax == "") {
+         VannualTax = 0;
+         VmonthlyTax =0;
+      } else {
+         VannualTax = sn(VannualTax);
+         VmonthlyTax = VannualTax / 12;
+         VmonthlyTax *= 100;
+         VmonthlyTax = Math.round(VmonthlyTax);
+         VmonthlyTax /= 100;
+      }
+
+      var VannualInsurance = document.calc.annualInsurance.value;
+      var VmonthlyInsurance = 0;
+      if(VannualInsurance == 0 || VannualInsurance == "") {
+         VannualInsurance = 0;
+         VmonthlyInsurance = 0;
+      } else {
+         VannualInsurance = sn(VannualInsurance);
+         VmonthlyInsurance = VannualInsurance / 12;
+         VmonthlyInsurance *= 100;
+         VmonthlyInsurance = Math.round(VmonthlyInsurance);
+         VmonthlyInsurance /= 100;
+      }
+
+      var VmonthlyPMI = document.calc.monthlyPMI.value;
+      if(VmonthlyPMI == 0 || VmonthlyPMI == "") {
+         VmonthlyPMI = 0;
+      } else {
+         VmonthlyPMI = sn(VmonthlyPMI);
+      }
+
+      var VotherPmts = Number(VmonthlyTax) + Number(VmonthlyInsurance) + Number(VmonthlyPMI);
+
+      var VnumPmts = VnumYears * 12;
+
+      var pmtAmt = computeMonthlyPayment(Vprincipal, VnumPmts, VintRate);
+      var VtotalMtgPmt = Number(pmtAmt) + Number(VotherPmts);
+
+      var prin = Vprincipal;
+
+      var Vint = VintRate;
+
+      if(Vint >= 1) {
+         Vint /= 100;
+         }
+      Vint /= 12;
+
+      var nPer = VnumPmts;
+
+      var intPort = 0;
+      var accumInt = 0;
+      var prinPort = 0;
+      var accumPrin = 0;
+      var count = 0;
+      var pmtRow = "";
+      var pmtNum = 0;
+
+      var today = new Date();
+      var dayFactor = today.getTime();
+      var pmtDay = today.getDate();
+      var loanMM = today.getMonth() + 1;
+      var loanYY = today.getFullYear();
+      if(loanYY < 1900) {
+         loanYY += 1900;
+      }
+      var loanDate = (loanMM + "/" + pmtDay + "/" + loanYY);
+      var monthMS = 86400000 * 30.4375;
+      var pmtDate = 0;
+      var displayPmtAmt = 0;
+      var accumYearPrin = 0;
+      var accumYearInt = 0;
+
+      while(count < nPer) {
+
+         if(count < (nPer - 1)) {
+
+            intPort = prin * Vint;
+            intPort *= 100;
+            intPort = Math.round(intPort);
+            intPort /= 100;
+
+            accumInt = Number(accumInt) + Number(intPort);
+            accumYearInt = Number(accumYearInt) + Number(intPort);
+
+            prinPort = Number(pmtAmt) - Number(intPort);
+            prinPort *= 100;
+            prinPort = Math.round(prinPort);
+            prinPort /= 100;
+
+            accumPrin = Number(accumPrin) + Number(prinPort);
+            accumYearPrin = Number(accumYearPrin) + Number(prinPort);
+
+            prin = Number(prin) - Number(prinPort);
+
+            displayPmtAmt = Number(prinPort) + Number(intPort);
+
+         } else {
+
+            intPort = prin * Vint;
+            intPort *= 100;
+            intPort = Math.round(intPort);
+            intPort /= 100;
+
+            accumInt = Number(accumInt) + Number(intPort);
+            accumYearInt = Number(accumYearInt) + Number(intPort);
+
+            prinPort = prin;
+
+            accumPrin = Number(accumPrin) + Number(prinPort);
+            accumYearPrin = Number(accumYearPrin) + Number(prinPort);
+
+            prin = 0;
+
+            //pmtAmt = Number(intPort) + Number(prinPort);
+            displayPmtAmt = Number(prinPort) + Number(intPort);
+         }
+
+         count = Number(count) + Number(1);
+
+         pmtNum = Number(pmtNum) + Number(1);
+
+         dayFactor = Number(dayFactor) + Number(monthMS);
+
+         pmtDate = new Date(dayFactor);
+
+         pmtMonth = pmtDate.getMonth();
+
+         pmtMonth = pmtMonth + 1;
+
+         pmtYear = pmtDate.getFullYear();
+         if(pmtYear < 1900) {
+            pmtYear += 1900;
+         }
+
+
+         pmtString = (pmtMonth + "/" + pmtDay + "/" + pmtYear);
+
+         pmtRow += "<tr><td align=right><font face='arial'><small>" + pmtNum + "</small></td>";
+         pmtRow += "<td align=right><font face='arial'><small>" + pmtString + "</small></td>";
+         pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(prinPort,2,1) + "</small></td>";
+         pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(intPort,2,1) + "</small></td>";
+         pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(displayPmtAmt,2,1) + "</small></td>";
+         pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(prin,2,1) + "</small></td></tr>";
+ 
+
+         if(pmtMonth == 12 || count == nPer) {
+
+            pmtRow += "<tr bgcolor='#dddddd'><td align=right><font face='arial'><small>Total</small></td>";
+            pmtRow += "<td align=left><font face='arial'><small>" + pmtYear + "</small></td>";
+            pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(accumYearPrin,2,1) + "</small></td>";
+            pmtRow += "<td align=right><font face='arial'><small>" + "$" + fn(accumYearInt,2,1) + "</small></td>";
+            pmtRow += "<td align=right><font face='arial'><small> </small></td>";
+            pmtRow += "<td align=right><font face='arial'><small> </small></td></tr>";
+
+
+            accumYearPrin = 0;
+            accumYearInt = 0;
+
+         }
+
+         if(count > 1200) {
+            alert("Using your current entries you will never pay off this loan.");
+            break;
+         } else {
+            continue;
+         }
+
+      }
+
+
+
+      var part1 = "<head><title>Mortgage Amortization Schedule</title></head>";
+      part1 += "<body bgcolor= '#FFFFFF'><br /><br /><center><font face='arial'>";
+      part1 += "<big><strong>Your Home Loan Amortization Schedule</strong></big></center>";
+
+
+      var part2 = "<center><table border=1 cellpadding=2 cellspacing=0>";
+      part2 += "<tr><td colspan=6><font face='arial'><small><strong>Loan ";
+      part2 += "Date: " + loanDate + "<br />Principal: $" + fn(Vprincipal,2,1) + "<br /># of ";
+      part2 += "Payments: " + nPer + "<br />Interest Rate: " + fn(VintRate,3,0) + "%<br />";
+      part2 += "P&amp;I Payment: $" + fn(pmtAmt,2,1) + "</strong></small></td></tr><tr><td colspan=6>";
+      part2 += "<center><font face='arial'><strong>Schedule of P&amp;I Payments</font></strong><br /><font face='arial'>";
+      part2 += "<small>Slight differences may occur due to rounding.</small></center></td></tr>";
+      part2 += "<tr bgcolor='silver'><td align='center'><font face='arial'><small><strong>Pmt #</strong></small></td>";
+      part2 += "<td align='center'><font face='arial'><small><strong>Date</strong></small></td>";
+      part2 += "<td align='center'><font face='arial'><small><strong>Principal</strong></small></td>";
+      part2 += "<td align='center'><font face='arial'><small><strong>Interest</strong></small></td>";
+      part2 += "<td align='center'><font face='arial'><small><strong>Payment</strong></small></td>";
+      part2 += "<td align='center'><font face='arial'><small><strong>Balance</strong></small></td></tr>";
+
+      var part3 = ("" + pmtRow + "");
+
+      var part4 = "<tr><td colspan='2'><font face='arial'><small><strong>Grand Total</strong></small></td>";
+      part4 += "<td align=right><font face='arial'><small><strong>" + "$" + fn(accumPrin,2,1) + "</strong></small></td>";
+      part4 += "<td align=right><font face='arial'><small><strong>" + "$" + fn(accumInt,2,1) + "</strong></small></td>";
+      part4 += "<td> </td><td> </td></tr></table><br /><center><form method='post'>";
+      part4 += "<input type='button' value='Close Window' onClick='window.close()'></form>";
+      part4 += "</center></body></html>";
+
+
+      var schedule = (part1 + "" + part2 + "" + part3 + part4 + "");
+      reportWin = window.open("","","width=500,height=400,toolbar=yes,menubar=yes,scrollbars=yes");
+      reportWin.document.write(schedule);
+      reportWin.document.close();
+
+   }
+
+}
+
+
+function clear_results(form) {
+
+   document.calc.monthlyPI.value = "";
+   document.calc.otherPmts.value = "";
+   document.calc.monthlyPmt.value = "";
+
+}</script>
 </body>
 
 </html>
